@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const input = "12345";
+        let number = Number(input);
+
+        console.info(typeof (input));
+        console.info(typeof (number));
+
+        console.info(Number("wrong"));
+
+        console.info(Number.MIN_VALUE);
+        console.info(Number.MAX_VALUE);
+        console.info(Number.MIN_SAFE_INTEGER);
+        console.info(Number.MAX_SAFE_INTEGER);
+
+        console.info(Number.isNaN(input));
+        console.info(Number.isInteger(number));
+
+        const v = Number("6319393939363");
+
+        console.info(v.toString(2));
+        console.info(v.toLocaleString("nl-NL"));
+
+
+    </script>
+
+</body>
+
+</html>

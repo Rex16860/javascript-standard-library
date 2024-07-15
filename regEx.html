@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        {
+            // create
+
+            const sample1 = /sample1/;
+            const sample2 = new RegExp('sample2');
+            const sample3 = new RegExp(/sample3/);
+        }
+        {
+            // test
+
+            const string = 'belajar javascript standard library chapter RegEx';
+            const sample1 = /belajar/;
+
+            r = sample1.exec(string);
+            console.info(r);
+
+            r = sample1.test(string)
+            console.info(r);
+        }
+        {
+            // modifier
+
+            const string = 'belajar Javascript\nBelajar javascript standard library chapter RegEx\n';
+            const string2 = string + 'bajar Javascript\nBear javascript standard library chapter RegEx';
+            const string3 = 'shrank \nshrink \nshrunk \nshrenk \nshronk \n sink';
+            const sample1 = /belajar/ig;
+            const sample2 = /Javascript/ig;
+            const sample3 = /b/ig;
+            const sample4 = /s[h-i][i-r][a-z]/ig;
+
+            let r;
+            // while ((r = sample1.exec(string)) !== null) {
+            //     console.info(r);
+            // }
+
+            // while ((r = sample2.exec(string)) !== null) {
+            //     console.info(r);
+            // }
+            // while ((r = sample3.exec(string2)) !== null) {
+            //     console.info(r);
+            // }
+            while ((r = sample4.exec(string3)) !== null) {
+                console.info(r);
+            }
+        }
+        {
+            // regex method in string 
+
+            const string = 'belajar Javascript\nBelajar javascript standard library chapter RegEx sat\n';
+            const string2 = string + 'bajar Javascript\nBear javascript standard library chapter RegEx sit\nsut';
+            const string3 = 'shrank shrink shrunk shrenk shronk sink';
+            const sample1 = /belajar/ig;
+            const sample2 = /Javascript/ig;
+            const sample3 = /b/ig;
+            const sample4 = /s[h-i][i-r][a-z]/ig;
+
+            console.info(string2.match(/s[aiueo]t/ig));
+            console.info(string2.search(/s[aiueo]t/ig));
+            console.info(string2.replace(/s[aiueo]t/i, 'dummy'));
+            console.info(string2.replaceAll(/s[aiueo]t/ig, 'dummy'));
+            console.info(string3.split(/h/ig));
+        }
+
+    </script>
+
+</body>
+
+</html>

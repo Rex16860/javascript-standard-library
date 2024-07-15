@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class User {
+            constructor(name, password, email, address, hobbies) {
+                this.name = name;
+                this.password = password;
+                this.email = email;
+                this.address = address;
+                this.hobbies = hobbies;
+            }
+        }
+
+        const user1 = new User('userx', 'xxx', 'x@gmail.com', { country: 'spain', city: 'xxx' }, ['gaming', 'coding', 'sleping']);
+        console.info(user1);
+
+        const json = JSON.stringify(user1);
+        console.info(json);
+
+        const jsonObj = JSON.parse(json);
+        console.info(jsonObj);
+
+    </script>
+
+</body>
+
+</html>

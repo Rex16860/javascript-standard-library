@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        {
+            const d1 = new Date();
+            console.info(d1);
+
+            const d2 = new Date(2004, 10, 16, 2);
+            console.info(d2);
+
+            const d3 = new Date(0, 10, 16, 2, 50, 2, 20);
+            console.info(d3);
+
+            const d4 = new Date(1720852095658);
+            console.info(d4);
+        }
+        {
+            const d1 = new Date();
+            console.info(d1.getTime());
+
+            const d2 = new Date(2004, 10, 16, 2);
+            console.info(d2.getTime());
+
+            const d3 = new Date(2004, 10, 16, 2, 50, 2, 20);
+            console.info(d3.getTime());
+
+            const d4 = new Date(1720852095658);
+            console.info(d4.getTime());
+
+            console.info(Date.now())
+        }
+
+        {
+
+            // parsing date 
+
+            const input = "2004-11-16T02:15:40.123+08:00";
+            const time = Date.parse(input);
+            console.info(time);
+
+            const d = new Date(time);
+            console.info(d);
+        }
+
+        {
+
+            // getter and setter 
+
+            const d = new Date();
+
+            d.setFullYear(2024 - 24);
+
+            console.info(d.getFullYear())
+            console.info(d.getMofnth())
+            console.info(d.getDate())
+            console.info(d.getDay())
+            console.info(d.getHours())
+            console.info(d.getSeconds())
+            console.info(d.getMilliseconds())
+            console.info(d.getTimezoneOffset())
+
+        }
+
+    </script>
+
+</body>
+
+</html>

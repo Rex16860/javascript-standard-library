@@ -1,0 +1,14 @@
+{
+    "name": "userx",
+    "password": "xxx",
+    "email": "x@gmail.com",
+    "address": {
+        "country": "spain",
+        "city": "xxx"
+    },
+    "hobbies": [
+        "gaming",
+        "coding",
+        "sleping"
+    ]
+}

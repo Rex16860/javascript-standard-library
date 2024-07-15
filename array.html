@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        {
+
+            const items = ['robot', 'bow', 'sword'];
+
+            items.forEach(function (v, i) {
+                console.info(`${i}: ${v}`);
+            })
+            items.forEach((v, i) => {
+                console.info(`${i}: ${v}`);
+            })
+            items.forEach(v => {
+                console.info(`${v}`);
+            })
+
+        }
+
+        {
+
+            const queue = [];
+
+            queue.push('spear');
+            queue.push('knives');
+            queue.push('plane');
+
+            console.info(queue);
+            console.info(queue.shift());
+            console.info(queue.shift());
+            console.info(queue.shift());
+            console.info(queue.shift());
+            console.info(queue);
+
+        }
+
+        {
+
+            const stack = [];
+
+            stack.push('spear');
+            stack.push('knives');
+            stack.push('plane');
+
+            console.info(stack);
+            console.info(stack.pop());
+            console.info(stack.pop());
+            console.info(stack.pop());
+            console.info(stack.pop());
+            console.info(stack);
+
+        }
+
+        {
+
+            // array search
+
+            const values = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
+
+            console.info(values.find(v => v > 5));
+            console.info(values.find(v => v > 6));
+
+            console.info(values.findIndex(v => v > 1));
+            console.info(values.findIndex(v => v > 6));
+
+            console.info(values.includes(6));
+            console.info(values.includes(7));
+
+            console.info(values.indexOf(1));
+            console.info(values.lastIndexOf(1));
+            console.info(values.indexOf(8));
+
+        }
+
+        {
+            // filter
+
+            const values = [1, 2, 3, 4, 5, 6, , 7, 8, 9, 10];
+
+            console.table(values);
+            console.table(values.filter(v => v % 2 === 1));
+            console.table(values.filter(v => v % 2 === 0));
+
+        }
+
+        {
+
+            // transform
+
+            const fullName = 'John Doe xxx';
+            const datas = fullName.split(" "); // [x, y, z]
+            console.info(datas);
+
+            console.info(datas.map(v => v.toUpperCase()));
+            console.info(datas.reduce((b, v) => b + ' ' + v));
+            console.info(datas.reduceRight((b, v) => b + ' ' + v));
+
+            const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            console.info(nums.reduce((b, v) => b + v));
+
+        }
+
+    </script>
+
+</body>
+
+</html>
