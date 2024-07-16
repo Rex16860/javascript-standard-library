@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        {
+
+            // endcode & decode
+
+            const url = "https://example.com/?name=John Doe xxx";
+            const result = url.replaceAll(" ", "+")
+            console.info(result);
+
+            const endcode = encodeURI(result);
+            console.info(endcode);
+
+            const decode = decodeURI(result);
+            console.info(decode);
+
+            const finalResult = decode.replaceAll("+", " ");
+            console.info(finalResult);
+
+        }
+        {
+
+            // endcode component & decode component
+
+            const sample = '&John&Doe=xxx';
+            const url = 'https://example.com/?name=';
+
+            const encode = encodeURIComponent(sample);
+            console.info(url + encode);
+
+            const decode = decodeURIComponent(encode);
+            console.info(url + decode);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

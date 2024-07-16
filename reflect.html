@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const items = {};
+
+        Reflect.set(items, "weapon", "bow");
+        Reflect.set(items, "food", "beef");
+
+        console.info(items)
+
+        console.info(Reflect.get(items, "weapon"));
+        console.info(Reflect.get(items, "food"));
+        console.info(Reflect.has(items, "weapon"));
+        console.info(Reflect.has(items, "armor"));
+        console.info(Reflect.has(items, "food"));
+
+    </script>
+
+</body>
+
+</html>

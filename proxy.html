@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const target = {
+            lastName: "Doe",
+        };
+        const handler = {
+            get: function (target, property) {
+                return target[property];
+            },
+            set: function (target, property, value) {
+                if (value === null) {
+                    throw new Error(`value musn't null`);
+                } else {
+                    target[property] = value;
+                }
+            }
+        };
+
+        const proxy = new Proxy(target, handler);
+        try {
+            proxy.name = "John"
+            proxy.age = "25"
+            proxy.hobby = "coding"
+            proxy.food = null
+        } catch (e) {
+            console.error(`Error: ${e.message}`);
+        }
+
+        console.info(proxy.name);
+        console.info(proxy.lastName);
+        console.info(proxy.age);
+        console.info(proxy.hobby);
+        console.info(proxy.food);
+        console.info(target);
+
+
+    </script>
+
+</body>
+
+</html>
